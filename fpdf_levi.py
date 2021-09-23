@@ -26,5 +26,11 @@ pdf.cell(ln=1, h=7, w=20,txt=f'-------------------------------------------------
 # genereer de afbeelding
 pdf.image("./resources/pexels-pixabay-48125.jpeg", 12, 65, width - 24)
 
+# Sla de pdf op hetzelfde niveau als waar dit .py bestand staat
+# pdf.output(f'{timestamp}.pdf', 'F')
 
-pdf.output(f'{timestamp}.pdf', 'F')
+# Sla pdf op op de aangegeven locatie
+pdf.output(f'./resources/{timestamp}.pdf', 'F')
+
+# Dit is de functie om het als download te forceren naar de browser
+# pdf.output(f'{timestamp}.pdf', 'D')
